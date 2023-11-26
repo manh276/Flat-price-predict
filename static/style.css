@@ -1,0 +1,77 @@
+/*animation*/
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+    
+}
+/*style*/
+form
+{
+--growth-from: 0.7;
+--growth-to: 1;
+color: #ff5a80;
+text-align: left;
+background: #fff;
+box-shadow: 0 0 14px 8px rgba(24,25,31,.07);
+border-radius: 20px;
+width: 20%;
+position: relative;
+margin: 0 auto;
+padding: 34px;
+box-sizing: border-box;
+animation: growth linear 0.15s;
+}
+
+.but {
+    background-color: #ffecee;
+    color: #ff5a80;
+    height: 40px;
+    border-radius: 6px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 12px;
+}
+
+#myButton
+{ 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    outline: none;   
+}
+#Result
+{
+    position: absolute;
+    top: 500px;
+    right: 500px;  
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+h1 {
+    background-color: white;
+  }

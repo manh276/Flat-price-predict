@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html >
+    <head>
+        <title>Predict App</title>
+        <link rel="stylesheet" link href="/static/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    </head>
+    <body>
+        <center>
+        <!-- <h1 class="w3-container w3-blue"> <b>FLAT PRICE PREDICT<b> </h1> -->
+        <h1> <b style="color: #ff5a80;">FLAT PRICE PREDICT<b> </h1>
+        <button type="button" id="myButton" class="but"><b>Predict here</b></button> <br>
+        <div id="myForm" style="display: none;">    
+            <form name='myForm' method="POST", action="{{url_for('home')}}", onsubmit="return validateForm()" required>
+            <b>Flat type :  <input type="float", name='Flat_type' > <br>
+                Storey range :  <input type="float", name='Storey_range'> <br>
+                Floor area sqm : <input type="float", name='Floor_area_sqm'> <br>
+                Lease commence date : <input type="float", name='Lease_commence_date'> <br>
+                Latitude : <input type="float", name='Latitude'> <br>
+                Longitude : <input type="float", name='Longitude'> <br>
+                Cluster : <input type="float", name='Cluster'> <br>
+                <label for="model">Choose a model:</label>
+                <select name="model" id="model">
+                  <option value="lr">linear regression</option>
+                  <option value="xgb">XGBoost</option>
+                  <option value="SGD">SGD</option>
+                  <option value="rf">Random forest</option>
+                </select><br><br>
+                <input id = "submit" class="but" type="submit" , value='predict'>
+            </form>
+        </div>
+    </body>
+        
+</html>
+<!-- SCRIPT -->
+<script>
+    function toggleForm() {
+        var form = document.getElementById("myForm");
+        if (form.style.display === "block") {
+        form.style.display = "none";
+        } else {
+        form.style.display = "block";
+        }
+    }
+    
+    document.getElementById("myButton").onclick = toggleForm;
+    
+
+    function validateForm() {
+        var variables = ["Flat_type", "Storeyrange","Floor_area_sqm",
+                        "Lease_commence_date","Latitude","Longitude",
+                        "Cluster"];
+        for (var i = 0; i < variables.length; i++) {
+            var x = document.forms["myForm"][variables[i]].value;
+            if (x == "") {
+                alert("Vui lòng điền đầy đủ thông tin");
+            return false;
+            }
+    }    
+}       
+</script>
+<style>
+body {
+    background-image: url("https://global-uploads.webflow.com/5f8167b8d03242770b5dfb97/60fe5a60539af06367259dc1_rsz_1untitled_design_15.png");
+    background-color: #cccccc;
+   }
+ </style>

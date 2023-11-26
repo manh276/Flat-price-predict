@@ -12,5 +12,4 @@ this app uses model packed to deploy.
 - I havent optimized paramaters for the models.
 - The web display look like this
 ![Alt text](https://i.ibb.co/Wv6nkfG/flat.png)
-**It's just a test so I haven't made a tranformed script yet to tranform what user typing on webapp. You should add tranformed script to completed
-or typing number instead of string like data in unprocessed dataset ^^**
+**It's just a test so I haven't written a transformation script yet to transform user input on the web app. You can add the transformation script to the completed or typed number instead of string data in the unprocessed dataset ^^.**

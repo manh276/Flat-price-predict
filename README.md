@@ -2,6 +2,7 @@
 Using some ML method to predict Flat price
 ---
 I have created some ML method from sklearn lib to predict Flat sale price.
+Data collected from HDB flat resale (Singapore)
 ---
 **To use**:
 - run **Flat_Building Model.ipynb** to create and pack model into pickle file (if you want to deploy on Flask web app)
